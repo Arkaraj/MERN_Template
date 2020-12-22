@@ -4,7 +4,7 @@ Basic npm stuffs:
 1.express
 2.mongoose
 3.ejs
-4.nodemon ig
+4.nodemon (globally installed -g)
 5.socket 
 
 Client:
