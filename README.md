@@ -22,6 +22,7 @@ Client:
 | ejs  | EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.        |
 | Body-parser  | Parse incoming request bodies in a middleware before your handlers, available under the req.body property.        |
 | socket.io  | Socket.IO enables real-time, bidirectional and event-based communication.        |
+| dotenv  | Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.        |
 
 ## Working
 clone it
