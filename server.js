@@ -3,17 +3,21 @@ const app = express();
 const mongoose = require('mongoose');
 const http = require('http');
 const socketio = require('socket.io');
+require('dotenv').config();
 
 //For Socket.io
 const server = http.createServer(app);
 io = socketio(server);
 
-//MongoDB
-// mongoose.connect('mongodb+srv://mernauth:<password>@cluster0.mbgdf.mongodb.net/<dbname>?retryWrites=true&w=majority',
-//     { useNewUrlParser: true, useUnifiedTopology: true }, () => {
-//         console.log('Successfully connected to database');
-//     }
-// );
+// Setting view engine for rendering ejs, not req for REACT
+app.set('view engine', 'ejs');
+
+//MongoDB, store the string in .env file
+ mongoose.connect(`mongodb+srv://${process.env.DB_NAME}:${process.env.DB_PASS}@cluster0.mbgdf.mongodb.net/<dbname>?retryWrites=true&w=majority`,
+     { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+         console.log('Successfully connected to database');
+     }
+ );
 //Main
 app.get('/', function (req, res) {
     res.send('Server Started!');
