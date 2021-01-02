@@ -26,6 +26,7 @@ app.get('/', function (req, res) {
 //PORT, backend running on 5000
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => {
+// For socket server.listen
+server.listen(port, () => {
     console.log(`Listning on Port:${port}!`);
 })
